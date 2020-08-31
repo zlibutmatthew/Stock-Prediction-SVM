@@ -4,5 +4,6 @@ import pandas_datareader as web
 import matplotlib.pyplot as plt
 from sklearn import svm
 
-#Get the stock info
-df = web.DataReader('AAPL', data_source='yahoo', start='2008-01-01')
+#Get the stock info and store into a dataframe
+df = web.DataReader('AAPL', data_source='yahoo', start='2008-01-01', end='2019-12-31')
+df
