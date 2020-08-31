@@ -7,3 +7,11 @@ from sklearn import svm
 #Get the stock info and store into a dataframe
 df = web.DataReader('AAPL', data_source='yahoo', start='2008-01-01', end='2019-12-31')
 df
+df.shape
+
+#Visualize the closing prince of the Apple stock.
+plt.figure(figsize=(16,8))
+plt.title('Close Price History')
+plt.plot(df['Close'])
+plt.xlabel('Date 2008-01-01:2019-12-31')
+plt.ylabel('Stock Close Price')
